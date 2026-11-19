@@ -13,7 +13,7 @@
         @error('name')<small class="mt-1 block font-normal text-[#b33d2a]">{{ $message }}</small>@enderror
     </label>
     <label class="text-sm font-bold text-[#173d2a]">District
-        <select name="district_id" class="mt-2 w-full rounded-xl border border-[#ccd9cc] bg-[#f8fbf7] px-4 py-3">
+        <select name="district_id" class="mt-2 w-full rounded-xl border border-[#9caf9f] bg-[#f8fbf7] px-4 py-3 outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10">
             @foreach($districts as $district)<option value="{{ $district->id }}" @selected(old('district_id',$eatery->district_id ?? '')==$district->id)>{{ $district->name }}</option>@endforeach
         </select>
         @error('district_id')<small class="mt-1 block font-normal text-[#b33d2a]">{{ $message }}</small>@enderror
@@ -23,7 +23,7 @@
         @error('address')<small class="mt-1 block font-normal text-[#b33d2a]">{{ $message }}</small>@enderror
     </label>
     <label class="text-sm font-bold text-[#173d2a]">Price range
-        <select name="price_range" class="mt-2 w-full rounded-xl border border-[#ccd9cc] bg-[#f8fbf7] px-4 py-3">
+        <select name="price_range" class="mt-2 w-full rounded-xl border border-[#9caf9f] bg-[#f8fbf7] px-4 py-3 outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10">
             @foreach(['budget','mid','splurge'] as $range)<option @selected(old('price_range',$eatery->price_range ?? '')==$range) value="{{ $range }}">{{ $range }}</option>@endforeach
         </select>
         @error('price_range')<small class="mt-1 block font-normal text-[#b33d2a]">{{ $message }}</small>@enderror

@@ -8,3 +8,19 @@
     --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
 }
+
+@layer base {
+    input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]),
+    textarea,
+    select {
+        border: 1px solid #9caf9f;
+    }
+
+    input:not([type="hidden"]):not([type="checkbox"]):not([type="radio"]):focus,
+    textarea:focus,
+    select:focus {
+        border-color: #2f7d32;
+        outline: 2px solid rgb(47 125 50 / 0.14);
+        outline-offset: 1px;
+    }
+}
