@@ -63,4 +63,4 @@
     @error('features.*')<small class="mt-1 block text-[#b33d2a]">{{ $message }}</small>@enderror
 </fieldset>
 
-<button class="mt-7 rounded-xl bg-[#173d2a] px-6 py-3 font-bold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-[#2f7d32]">{{ $buttonText }}</button>
+<button class="mt-7 rounded-xl bg-[#173d2a] px-6 py-3 font-bold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-[#2f7d32]">{{ $buttonText }}</button>

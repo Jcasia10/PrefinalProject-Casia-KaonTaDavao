@@ -4,10 +4,10 @@
         <div class="absolute -right-20 -top-24 h-72 w-72 rounded-full bg-[#2f7d32]/30 blur-2xl"></div>
         <div class="absolute bottom-0 right-16 h-24 w-24 rounded-full border-[18px] border-[#a8c96a]/15"></div>
         <div class="relative max-w-2xl">
-            <p class="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-[#a8c96a]">Explore Davao's tables</p>
-            <h1 class="font-serif text-4xl font-bold leading-tight sm:text-5xl">Find your next favorite <span class="text-[#66a866]">lutong Davao</span></h1>
-            <p class="mt-5 max-w-xl text-base leading-7 text-[#dfd4c8]">Discover neighborhood carinderias, local specialties, and honest reviews across the city.</p>
-            <a class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2f7d32] px-5 py-3 font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#f06a35]" href="{{ route('eateries.index') }}">Browse eateries <span>→</span></a>
+            <p class="mb-3 text-xs font-bold uppercase tracking-[0.28em] text-white">Explore Davao's tables</p>
+            <h1 class="font-serif text-4xl font-bold leading-tight sm:text-5xl">Find your next favorite <span class="text-white">lutong Davao</span></h1>
+            <p class="mt-5 max-w-xl text-base leading-7 text-white">Discover neighborhood carinderias, local specialties, and honest reviews across the city.</p>
+            <a class="mt-7 inline-flex items-center gap-2 rounded-full bg-[#2f7d32] px-5 py-3 font-bold text-white shadow-lg transition hover:-translate-y-0.5 hover:bg-[#2f7d32]" href="{{ route('eateries.index') }}">Browse eateries <span>→</span></a>
         </div>
     </section>
 

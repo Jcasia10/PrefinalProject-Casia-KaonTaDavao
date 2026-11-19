@@ -11,7 +11,7 @@
         <select id="district-filter" name="district" class="rounded-xl border border-[#9caf9f] bg-[#f8fbf7] px-4 py-3 outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10"><option value="">All districts</option>@foreach($districts as $district)<option value="{{ $district->id }}" @selected(request('district')==$district->id)>{{ $district->name }}</option>@endforeach</select>
         <label class="sr-only" for="feature-filter">Feature</label>
         <select id="feature-filter" name="feature" class="rounded-xl border border-[#9caf9f] bg-[#f8fbf7] px-4 py-3 outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10"><option value="">All features</option>@foreach($features as $feature)<option @selected(request('feature')==$feature->name)>{{ $feature->name }}</option>@endforeach</select>
-        <button class="rounded-xl bg-[#173d2a] px-5 py-3 font-bold text-white transition hover:bg-[#2f7d32]">Filter</button>
+        <button class="rounded-xl bg-[#173d2a] px-5 py-3 font-bold text-white transition duration-300 hover:-translate-y-0.5 hover:bg-[#2f7d32]">Filter</button>
     </form>
     @if($eateries->isEmpty())
         <div class="rounded-2xl border border-dashed border-[#bccdbf] bg-white px-6 py-16 text-center">

@@ -61,7 +61,7 @@
         </section>
         @if($eatery->is_open)
             <aside class="h-fit rounded-2xl border border-[#d4dfd4] bg-[#173d2a] p-6 text-white">
-                <p class="text-xs font-bold uppercase tracking-[0.18em] text-[#a8c96a]">Share your experience</p>
+                <p class="text-xs font-bold uppercase tracking-[0.18em] text-white">Share your experience</p>
                 <h2 class="mt-2 font-serif text-2xl font-bold">Leave a review</h2>
                 <form method="POST" action="{{ route('eateries.reviews.store',$eatery) }}" class="mt-5">
                     @csrf
@@ -69,7 +69,7 @@
                     <label class="block text-sm font-bold">Reviewer<select name="user_id" class="mt-2 w-full rounded-xl border border-[#9caf9f] px-3 py-2.5 text-[#173d2a] outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10"><option value="">Choose reviewer</option>@foreach($users as $user)<option value="{{ $user->id }}" @selected(old('user_id')==$user->id)>{{ $user->name }}</option>@endforeach</select></label>@error('user_id')<small class="mt-1 block text-[#ffb7a7]">{{ $message }}</small>@enderror
                     <label class="mt-4 block text-sm font-bold">Rating<input name="rating" type="number" min="1" max="5" value="{{ old('rating') }}" class="mt-2 w-full rounded-xl border border-[#9caf9f] px-3 py-2.5 text-[#173d2a] outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10" placeholder="1–5"></label>@error('rating')<small class="mt-1 block text-[#ffb7a7]">{{ $message }}</small>@enderror
                     <label class="mt-4 block text-sm font-bold">Review<textarea name="body" rows="4" class="mt-2 w-full rounded-xl border border-[#9caf9f] px-3 py-2.5 text-[#173d2a] outline-none transition focus:border-[#2f7d32] focus:ring-2 focus:ring-[#2f7d32]/10" placeholder="What did you enjoy?">{{ old('body') }}</textarea></label>@error('body')<small class="mt-1 block text-[#ffb7a7]">{{ $message }}</small>@enderror
-                    <button class="mt-5 w-full rounded-xl bg-[#2f7d32] px-4 py-3 font-bold text-white transition hover:bg-[#f06a35]">Post review</button>
+                    <button class="mt-5 w-full rounded-xl bg-[#2f7d32] px-4 py-3 font-bold text-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:bg-[#173d2a] hover:shadow-lg">Post review</button>
                 </form>
             </aside>
         @else
